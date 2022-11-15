@@ -1,0 +1,16 @@
+<div class="container d-flex">
+  <%= form_with model: @task do |f| %>
+  <div class="row mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="row mb-3">
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+  </div>
+  <div>
+    <%= f.button "Create new task", type: "submit", :class=> "btn btn-secondary mb-5" %>
+  </div>
+  <% end %>
+</div>
+  <%= link_to "Back to the list", index_path, :class=> "fa-sharp fa-solid fa-rotate-left"%>
